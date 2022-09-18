@@ -8,7 +8,7 @@ pipeline{
       choice(name: 'DEPLOYMENT_ENV', choices: ['UAT1', 'UAT2', 'PREPROD'], description: 'select env for deploy')
       string(name: 'DUMMYSTR', description: 'just a dummy value', defaultValue: 'ashwin')
     }
-    triggers { pollSCM('*****') }
+    triggers { pollSCM('H */4 * * 1-5') }
 
     options {
       buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '2', numToKeepStr: '2')

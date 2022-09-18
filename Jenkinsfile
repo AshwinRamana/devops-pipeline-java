@@ -25,7 +25,7 @@ pipeline{
     }
     post {
           always {
-              slackSend channel: 'devops', message: 'jenkins file '
+              slackSend channel: 'devops', message: 'jenkins '
       // One or more steps need to be included within each condition's block.
       }
 

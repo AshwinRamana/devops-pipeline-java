@@ -25,7 +25,7 @@ pipeline{
     }
     post {
           always {
-              slackSend channel: 'devops', message: 'jenkins '
+              slackSend channel: 'devops', message: 'jenkins webhook check'
       // One or more steps need to be included within each condition's block.
       }
 
